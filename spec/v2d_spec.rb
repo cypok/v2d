@@ -3,12 +3,10 @@ require 'v2d'
 describe V2D do
   it "#new should create with arguments" do
     v = V2D.new(1,2)
-    v.x.should == 1
   end
 
   it "#[] should create with arguments" do
     v = V2D[1, 2]
-    v.x.should == 1
   end
 
   it "#x should return first coordinate" do
@@ -25,7 +23,7 @@ describe V2D do
     v.should == V2D[3, 2]
   end
 
-  it "#y should set second coordinate" do
+  it "#y= should set second coordinate" do
     v = V2D[1, 2]
     v.y = 3
     v.should == V2D[1, 3]
@@ -58,6 +56,12 @@ describe V2D do
     describe "#/" do
       it "should return new vector as quotient" do
         (@v1/2).should == V2D[0.5, 1]
+      end
+
+      it "should return new vector as quotient even with zero divisor" do
+        r = @v1/0
+        r.x.should be_infinite
+        r.y.should be_infinite
       end
     end
 
