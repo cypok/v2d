@@ -1,11 +1,8 @@
-Installation:
-  ruby extconf.rb
-  make
-  make install
-
-Usage:
+=== Usage
+Simply require
+  require 'rubygems'
   require 'v2d'
-
+And use
   v1 = V2D[1.0, 2.0]  # or v1 = V2D.new(1.0, 2.0)
   v2 = V2D[0, 0]
 
@@ -17,5 +14,8 @@ Usage:
   (v2 / 4)  == V2D[2.75, 3]
   V2D[3, 4].abs == 5
 
-Tests:
+=== Tests
   spec v2d_spec.rb
+
+=== Author
+  Vladimir Parfinenko, write at vladimir[dot]parfinenko[at]gmail[dot]com
