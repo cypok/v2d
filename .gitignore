@@ -2,3 +2,4 @@ pkg
 doc
 lib
 ext/Makefile
+*.bundle

@@ -1,3 +1,5 @@
+#pragma once
+
 typedef struct _V2D {
     double x, y;
 } V2D;
